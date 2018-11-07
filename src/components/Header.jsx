@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header(){
   const headerStyles = {
@@ -6,13 +7,19 @@ function Header(){
     color: 'tomato',
     background: 'linear-gradient(to right, teal, purple, orange, purple, teal)',
     textAlign: 'center',
-    textShadow: '4px 62px 3px indigo',
-    border: '40px dotted white',
-    borderRadius: '50%'
+    textShadow: '0 2px 3px indigo',
+    border: '4px dotted white',
+    borderRadius: '1rem'
   };
   return (
-    <div>
-      <h1 style={headerStyles}>Help Queueueueueue</h1>
+    <div style={headerStyles}>
+      <style jsx>{`
+          div Link {
+            color: hotpink !important;
+          }
+          `}</style>
+      <h1>Help Queueueueueue</h1>
+      <Link to="/">Home</Link> | <Link to="/newticket">Create Ticket</Link>
     </div>
   );
 }

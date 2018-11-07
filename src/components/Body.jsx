@@ -16,6 +16,11 @@ function Body(props){
   return (
     <div style={bodyStyles}>
       <img src={props.image}></img>
+      <style jsx>{`
+          img {
+            border-radius: 2rem;
+          }
+            `}</style>
       <h4>{props.caption}</h4>
       <hr/>
       <hr/>
